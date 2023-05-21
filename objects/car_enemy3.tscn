@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccf27oo32kk8i"]
+
+[ext_resource type="PackedScene" uid="uid://u87gkwyb3cem" path="res://80s Car.glb" id="1_tyyji"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="80s Car" parent="." instance=ExtResource("1_tyyji")]
+transform = Transform3D(0, 0, -8.05923, 0, 8.05923, 0, 8.05923, 0, 0, 0, 2.37763, 0)
