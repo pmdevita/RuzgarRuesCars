@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ddy0aaeydwa"]
+
+[ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_wp3oy"]
+[ext_resource type="Resource" uid="uid://enyc025bwuq8" path="res://resources/CarEnemy.tres" id="2_su53o"]
+
+[node name="CarEnemy" type="Node3D"]
+script = ExtResource("1_wp3oy")
+config = ExtResource("2_su53o")

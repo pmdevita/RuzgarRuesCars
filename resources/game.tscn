@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://wmjr3772x2d6"]
+
+[ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="1_jto1n"]
+[ext_resource type="Script" path="res://resources/ruzgar.gd" id="2_6c77o"]
+[ext_resource type="Script" path="res://resources/camera.gd" id="3_wtmyf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_inu45"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aaq4l"]
+
+[sub_resource type="Environment" id="Environment_p15wn"]
+ambient_light_color = Color(0.458824, 0.584314, 1, 1)
+ambient_light_energy = 1.95
+sdfgi_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(31.0401, 0.244888, 2.84039)
+
+[node name="CarEnemy" parent="." instance=ExtResource("1_jto1n")]
+
+[node name="GameManager" type="Node3D" parent="."]
+
+[node name="StateManager" type="Node" parent="GameManager"]
+
+[node name="Pause" type="Node" parent="GameManager/StateManager"]
+
+[node name="Play" type="Node" parent="GameManager/StateManager"]
+
+[node name="Ruzgar" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.61, 1.15578, 0)
+script = ExtResource("2_6c77o")
+base_speed = 0.01
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ruzgar"]
+mesh = SubResource("CapsuleMesh_inu45")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ruzgar"]
+shape = SubResource("CapsuleShape3D_aaq4l")
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("player")]
+transform = Transform3D(0.714068, 0.514146, -0.475142, 0.0997268, 0.597075, 0.795963, 0.692937, -0.615756, 0.375078, -18.7211, 7.79133, 5.89572)
+script = ExtResource("3_wtmyf")
+player = NodePath("../Ruzgar")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p15wn")

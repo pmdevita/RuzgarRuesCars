@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://ovcpbshr1811"]
+[gd_scene load_steps=2 format=3 uid="uid://ovcpbshr1811"]
+
+[ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="1_cjl6n"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 size = Vector3(31.0401, 0.244888, 2.84039)
+
+[node name="CarEnemy" parent="." instance=ExtResource("1_cjl6n")]
