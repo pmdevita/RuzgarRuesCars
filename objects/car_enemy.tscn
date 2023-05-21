@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_wp3oy"]
 [ext_resource type="Resource" uid="uid://enyc025bwuq8" path="res://resources/CarEnemy.tres" id="2_su53o"]
-[ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://Car.glb" id="3_w24k3"]
+[ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://models/Car.glb" id="3_w24k3"]
 
 [node name="CarEnemy" type="Node3D"]
 script = ExtResource("1_wp3oy")

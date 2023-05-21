@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://ovcpbshr1811"]
 
-[ext_resource type="Material" uid="uid://cp0a27swij432" path="res://road_stripe.tres" id="1_3qqex"]
-[ext_resource type="PackedScene" uid="uid://chxumqfeup1u6" path="res://2trees.tscn" id="2_h4xhc"]
-[ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://Car.glb" id="3_l7fn2"]
+[ext_resource type="Material" uid="uid://cp0a27swij432" path="res://resources/road_stripe.tres" id="1_5gr3b"]
+[ext_resource type="PackedScene" uid="uid://chxumqfeup1u6" path="res://objects/2trees.tscn" id="2_h4xhc"]
+[ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://models/Car.glb" id="3_l7fn2"]
 [ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="4_2ydro"]
 [ext_resource type="PackedScene" uid="uid://36f45dworove" path="res://objects/car_enemy2.tscn" id="5_h6jbu"]
 [ext_resource type="PackedScene" uid="uid://ccf27oo32kk8i" path="res://objects/car_enemy3.tscn" id="6_slwp0"]
@@ -14,7 +14,7 @@ albedo_color = Color(0.145098, 0.145098, 0.145098, 1)
 material = SubResource("StandardMaterial3D_bvvrr")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yjnaa"]
-material = ExtResource("1_3qqex")
+material = ExtResource("1_5gr3b")
 
 [node name="Node3D" type="Node3D"]
 

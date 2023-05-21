@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://36f45dworove"]
 
-[ext_resource type="PackedScene" uid="uid://ecynhf78nwv8" path="res://Red Car.glb" id="1_i2gvb"]
+[ext_resource type="PackedScene" uid="uid://ecynhf78nwv8" path="res://models/Red Car.glb" id="1_i2gvb"]
 
 [node name="Node3D" type="Node3D"]
 
