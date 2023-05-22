@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h0vqlganp0v8"
-path="res://.godot/imported/Trashcan Large.glb-e4ff0e0b476067d17590eb60b2449ae3.scn"
+uid="uid://dioec4v1fwbh3"
+path="res://.godot/imported/Paperclip.glb-f01ba6a759070367bf644439a772ad76.scn"
 
 [deps]
 
-source_file="res://Trashcan Large.glb"
-dest_files=["res://.godot/imported/Trashcan Large.glb-e4ff0e0b476067d17590eb60b2449ae3.scn"]
+source_file="res://models/Paperclip.glb"
+dest_files=["res://.godot/imported/Paperclip.glb-f01ba6a759070367bf644439a772ad76.scn"]
 
 [params]
 

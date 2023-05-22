@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://u87gkwyb3cem"
-path="res://.godot/imported/80s Car.glb-c64663af06124391a6189713a4ef514c.scn"
+path="res://.godot/imported/80s Car.glb-d4e60e62d296dc9d14eddf3ddba3bf89.scn"
 
 [deps]
 
-source_file="res://80s Car.glb"
-dest_files=["res://.godot/imported/80s Car.glb-c64663af06124391a6189713a4ef514c.scn"]
+source_file="res://models/80s Car.glb"
+dest_files=["res://.godot/imported/80s Car.glb-d4e60e62d296dc9d14eddf3ddba3bf89.scn"]
 
 [params]
 
