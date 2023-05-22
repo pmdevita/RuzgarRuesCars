@@ -1,17 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://wmjr3772x2d6"]
+[gd_scene load_steps=10 format=3 uid="uid://wmjr3772x2d6"]
 
 [ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="1_jto1n"]
 [ext_resource type="Script" path="res://resources/ruzgar.gd" id="2_6c77o"]
 [ext_resource type="Script" path="res://resources/camera.gd" id="3_wtmyf"]
+[ext_resource type="PackedScene" uid="uid://d02uol5d0ednl" path="res://map.tscn" id="4_2fbby"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_inu45"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aaq4l"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o6uuj"]
+sky_top_color = Color(0, 0.321569, 0.92549, 1)
+sky_horizon_color = Color(0.423529, 0.815686, 1, 1)
+
+[sub_resource type="Sky" id="Sky_7l5my"]
+sky_material = SubResource("ProceduralSkyMaterial_o6uuj")
+
 [sub_resource type="Environment" id="Environment_p15wn"]
-ambient_light_color = Color(0.458824, 0.584314, 1, 1)
-ambient_light_energy = 1.95
-sdfgi_enabled = true
+background_mode = 2
+background_energy_multiplier = 2.0
+sky = SubResource("Sky_7l5my")
+ambient_light_source = 2
+ambient_light_color = Color(0.776471, 0.941176, 1, 1)
+ambient_light_energy = 1.06
 
 [node name="Node3D" type="Node3D"]
 
@@ -30,10 +41,13 @@ size = Vector3(568.746, 0.244888, 2.84039)
 [node name="Play" type="Node" parent="GameManager/StateManager"]
 
 [node name="Ruzgar" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67466, 1.156, 0)
+transform = Transform3D(1.78873, 0, 0, 0, 1.78873, 0, 0, 0, 1.78873, -374.135, 2.93114, -0.00961494)
 script = ExtResource("2_6c77o")
-base_speed = 10.0
-jump_force = 20
+base_speed = 20.0
+jump_force = 80.0
+gravity = -30.0
+left_lane = -7.9
+lane_size = 7.9
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ruzgar"]
 mesh = SubResource("CapsuleMesh_inu45")
@@ -42,9 +56,18 @@ mesh = SubResource("CapsuleMesh_inu45")
 shape = SubResource("CapsuleShape3D_aaq4l")
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("player")]
-transform = Transform3D(0.714068, 0.514146, -0.475142, 0.0997268, 0.597075, 0.795963, 0.692937, -0.615756, 0.375078, -18.7211, 7.79133, 5.89572)
+transform = Transform3D(0.666064, 0.608647, -0.43117, 0, 0.578057, 0.815996, 0.745895, -0.543506, 0.385023, -15, 15, 7.5)
+current = true
 script = ExtResource("3_wtmyf")
+position_offset = Vector3(-15, 12, 6.5)
+rotation_offset = Vector3(-45, -45, 10)
 player = NodePath("../Ruzgar")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_p15wn")
+
+[node name="Node3D" parent="." instance=ExtResource("4_2fbby")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.260336, -0.940999, -0.216209, -0.133189, -0.18679, 0.973329, -0.956288, 0.282189, -0.0767029, 0, 16.0033, 0)
+light_color = Color(0.862745, 0.956863, 1, 1)

@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ovcpbshr1811"]
+[gd_scene load_steps=10 format=3 uid="uid://d02uol5d0ednl"]
 
-[ext_resource type="Material" uid="uid://cp0a27swij432" path="res://resources/road_stripe.tres" id="1_5gr3b"]
-[ext_resource type="PackedScene" uid="uid://chxumqfeup1u6" path="res://objects/2trees.tscn" id="2_h4xhc"]
+[ext_resource type="Material" path="res://resources/road_stripe.tres" id="1_5gr3b"]
+[ext_resource type="PackedScene" path="res://objects/2trees.tscn" id="2_h4xhc"]
 [ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://models/Car.glb" id="3_l7fn2"]
 [ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="4_2ydro"]
-[ext_resource type="PackedScene" uid="uid://36f45dworove" path="res://objects/car_enemy2.tscn" id="5_h6jbu"]
-[ext_resource type="PackedScene" uid="uid://ccf27oo32kk8i" path="res://objects/car_enemy3.tscn" id="6_slwp0"]
+[ext_resource type="PackedScene" path="res://objects/car_enemy2.tscn" id="5_h6jbu"]
+[ext_resource type="PackedScene" path="res://objects/car_enemy3.tscn" id="6_slwp0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvvrr"]
 albedo_color = Color(0.145098, 0.145098, 0.145098, 1)
@@ -20,6 +20,7 @@ material = ExtResource("1_5gr3b")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(24.6126, 0, 0, 0, 2.19916, 0, 0, 0, 20.225, 0, 0, 0)
+use_collision = true
 size = Vector3(31.0401, 0.244888, 2.84039)
 
 [node name="road tar" type="MeshInstance3D" parent="CSGBox3D"]
@@ -438,22 +439,22 @@ transform = Transform3D(32.2584, 0, 0, 0, 2.19916, 0, 0, 0, 6.48445, 11.8325, 0,
 [node name="Node3D" type="Node3D" parent="128 trees/64 trees2/32 trees2/16trees2/8trees2/4trees2"]
 
 [node name="Car" parent="." instance=ExtResource("3_l7fn2")]
-transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -275.084, 0.726082, -8.10421)
+transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -163, 0.726082, -8.10421)
 
 [node name="Car2" parent="." instance=ExtResource("3_l7fn2")]
-transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -317.175, 0.726082, -0.172478)
+transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -205.091, 0.726082, -0.172478)
 
 [node name="Car3" parent="." instance=ExtResource("3_l7fn2")]
-transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -296.094, 0.726082, 7.97152)
+transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -184.01, 0.726082, 7.97152)
 
 [node name="Car4" parent="." instance=ExtResource("3_l7fn2")]
-transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -310.327, 0.726082, 14.7824)
+transform = Transform3D(-4.7334e-09, 0, 0.108288, 0, 0.108288, 0, -0.108288, 0, -4.7334e-09, -198.243, 0.726082, 14.7824)
 
 [node name="CarEnemy" parent="." instance=ExtResource("4_2ydro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -331.001, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -218.917, 0, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("5_h6jbu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -341.3, 0, 7.46849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -222.6, 0, 7.46849)
 
 [node name="Node3D2" parent="." instance=ExtResource("6_slwp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -351, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -232.3, 0, 0)
