@@ -8,7 +8,6 @@ var isRunning = true
 @export var lane_size = 10.0
 @export var lane = 0
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_lane_position()
