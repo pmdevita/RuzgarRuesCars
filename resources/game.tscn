@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://wmjr3772x2d6"]
+[gd_scene load_steps=11 format=3 uid="uid://wmjr3772x2d6"]
 
 [ext_resource type="PackedScene" uid="uid://c3ddy0aaeydwa" path="res://objects/car_enemy.tscn" id="1_jto1n"]
 [ext_resource type="Script" path="res://resources/ruzgar.gd" id="2_6c77o"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="2_m8cfw"]
+[ext_resource type="PackedScene" uid="uid://bld33m1f6hh25" path="res://ruzgar/ruzgar-lowpoly.tscn" id="3_eeq0j"]
 [ext_resource type="Script" path="res://resources/camera.gd" id="3_wtmyf"]
 [ext_resource type="PackedScene" uid="uid://d02uol5d0ednl" path="res://map.tscn" id="4_2fbby"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_inu45"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aaq4l"]
+radius = 0.6821
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o6uuj"]
 sky_top_color = Color(0, 0.321569, 0.92549, 1)
@@ -33,6 +34,7 @@ size = Vector3(568.746, 0.244888, 2.84039)
 [node name="CarEnemy" parent="." instance=ExtResource("1_jto1n")]
 
 [node name="GameManager" type="Node3D" parent="."]
+script = ExtResource("2_m8cfw")
 
 [node name="StateManager" type="Node" parent="GameManager"]
 
@@ -41,7 +43,7 @@ size = Vector3(568.746, 0.244888, 2.84039)
 [node name="Play" type="Node" parent="GameManager/StateManager"]
 
 [node name="Ruzgar" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.78873, 0, 0, 0, 1.78873, 0, 0, 0, 1.78873, -374.135, 2.93114, -0.00961494)
+transform = Transform3D(2.62142, 0, 0, 0, 2.62142, 0, 0, 0, 2.62142, -374.135, 0.614513, -0.01)
 script = ExtResource("2_6c77o")
 base_speed = 20.0
 jump_force = 80.0
@@ -49,17 +51,19 @@ gravity = -30.0
 left_lane = -7.9
 lane_size = 7.9
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ruzgar"]
-mesh = SubResource("CapsuleMesh_inu45")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ruzgar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.973433, 0)
 shape = SubResource("CapsuleShape3D_aaq4l")
+
+[node name="ruzgar-lowpoly" parent="Ruzgar" node_paths=PackedStringArray("game_manager") instance=ExtResource("3_eeq0j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+game_manager = NodePath("../../GameManager")
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("player")]
 transform = Transform3D(0.666064, 0.608647, -0.43117, 0, 0.578057, 0.815996, 0.745895, -0.543506, 0.385023, -15, 15, 7.5)
 current = true
 script = ExtResource("3_wtmyf")
-position_offset = Vector3(-15, 12, 6.5)
+position_offset = Vector3(-7, 8, 5.5)
 rotation_offset = Vector3(-45, -45, 10)
 player = NodePath("../Ruzgar")
 

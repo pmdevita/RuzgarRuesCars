@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var isRunning = true
+var is_running = true
 @export var base_speed = 0.25
 @export var jump_force = 9.0
 @export var gravity = 9.0
@@ -33,6 +33,6 @@ func _physics_process(delta):
 	velocity = velocity.lerp(newVel, 0.1)
 		
 	print(velocity)
-	if isRunning:
+	if is_running:
 		move_and_slide()
 	global_position.y = max(global_position.y, -2)
