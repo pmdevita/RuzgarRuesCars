@@ -31,7 +31,6 @@ size = Vector3(31.0401, 0.244888, 2.84039)
 [node name="Ruzgar" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.61, 1.15578, 0)
 script = ExtResource("2_6c77o")
-base_speed = 0.01
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ruzgar"]
 mesh = SubResource("CapsuleMesh_inu45")
