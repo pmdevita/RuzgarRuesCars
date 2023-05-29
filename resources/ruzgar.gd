@@ -7,6 +7,7 @@ var is_running = true
 @export var left_lane = -9.0
 @export var lane_size = 10.0
 @export var lane = 0
+var has_attacked_midair = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,13 +27,21 @@ func _process(delta):
 	
 func _physics_process(delta):
 	var newVel = Vector3(base_speed, gravity, 0)
-	if Input.is_action_pressed("game_jump") and is_on_floor():
-		velocity.y = jump_force
-		newVel.y += jump_force
-		
+	if Input.is_action_pressed("game_jump"):
+		if is_on_floor():
+			has_attacked_midair = false
+			velocity.y = jump_force
+			newVel.y += jump_force
+		elif not has_attacked_midair:
+			pass
+			
 	velocity = velocity.lerp(newVel, 0.1)
 		
 	print(velocity)
 	if is_running:
 		move_and_slide()
 	global_position.y = max(global_position.y, -2)
+
+func find_nearest_car():
+	pass
+

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://23r30bp0jqbg"]
+
+[ext_resource type="Script" path="res://resources/CarModels.gd" id="1_i5jy5"]
+[ext_resource type="PackedScene" uid="uid://u87gkwyb3cem" path="res://models/80s Car.glb" id="1_vm0fu"]
+[ext_resource type="PackedScene" uid="uid://ecynhf78nwv8" path="res://models/Red Car.glb" id="2_4t3i3"]
+[ext_resource type="PackedScene" uid="uid://3gu5o0aq3shk" path="res://models/Car.glb" id="3_q0b7r"]
+
+[resource]
+script = ExtResource("1_i5jy5")
+models = Array[PackedScene]([ExtResource("1_vm0fu"), ExtResource("2_4t3i3"), ExtResource("3_q0b7r")])

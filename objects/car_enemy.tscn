@@ -1,8 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3ddy0aaeydwa"]
+[gd_scene load_steps=6 format=3 uid="uid://c3ddy0aaeydwa"]
 
 [ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_wp3oy"]
-[ext_resource type="Resource" uid="uid://enyc025bwuq8" path="res://resources/CarEnemy.tres" id="2_su53o"]
+[ext_resource type="PackedScene" uid="uid://u87gkwyb3cem" path="res://models/80s Car.glb" id="3_3681i"]
+[ext_resource type="PackedScene" uid="uid://ecynhf78nwv8" path="res://models/Red Car.glb" id="4_076q1"]
+[ext_resource type="PackedScene" uid="uid://b8tsyvn1smqvy" path="res://models/scaled_car.tscn" id="5_ivf3u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmxtl"]
+size = Vector3(1, 0.5862, 2.05227)
 
 [node name="CarEnemy" type="Node3D"]
 script = ExtResource("1_wp3oy")
-config = ExtResource("2_su53o")
+model_index = null
+
+[node name="Models" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="80s Car" parent="Models" instance=ExtResource("3_3681i")]
+
+[node name="Red Car" parent="Models" instance=ExtResource("4_076q1")]
+
+[node name="Car" parent="Models" instance=ExtResource("5_ivf3u")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.136925, -0.0281274)
+shape = SubResource("BoxShape3D_rmxtl")
