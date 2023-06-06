@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="RuzgarRuesCars"
+config/description="Ruzgar rues cars, so he wants 2 frickin' smash them all!!!1!"
 run/main_scene="res://resources/game.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://Ruzgar Giggity.png"
+config/icon="res://Ruzgar Giggity.png"
 
 [input]
 
