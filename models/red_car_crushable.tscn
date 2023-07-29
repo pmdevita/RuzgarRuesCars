@@ -1,0 +1,268 @@
+[gd_scene load_steps=15 format=3 uid="uid://utx86sd688jn"]
+
+[ext_resource type="PackedScene" uid="uid://ecynhf78nwv8" path="res://models/Red Car.glb" id="1_4vfkf"]
+[ext_resource type="Shader" uid="uid://14jtvgxdtd3b" path="res://models/red car/Material.001.tres" id="2_xcpow"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_67hdo"]
+resource_name = "Material.001"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.906332, 0.120749, 0.132293, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 0.5
+shader_parameter/base_y = 1.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gv8m2"]
+resource_name = "Material.004"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.905882, 0.905882, 0.905882, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.775
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 0.4
+shader_parameter/base_y = 1.0
+shader_parameter/crumple_tween = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mju5a"]
+resource_name = "Material.005"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.293326, 0.293326, 0.293326, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 0.4
+shader_parameter/base_y = 1.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ec0vf"]
+resource_name = "Material.006"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.73331, 0.871454, 0.906332, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 0.4
+shader_parameter/base_y = 1.0
+shader_parameter/crumple_tween = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wv67i"]
+resource_name = "Material.002"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.153327, 0.153327, 0.153327, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 1.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g27vw"]
+resource_name = "Material.003"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.386661, 0.386661, 0.386661, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lroa"]
+resource_name = "Material.008"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.153327, 0.153327, 0.153327, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 0.4
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jxjwj"]
+resource_name = "Material.007"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.386661, 0.386661, 0.386661, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lng37"]
+resource_name = "Material.012"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.153327, 0.153327, 0.153327, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_18fco"]
+resource_name = "Material.011"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.386661, 0.386661, 0.386661, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfd8u"]
+resource_name = "Material.010"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.153327, 0.153327, 0.153327, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2kbdr"]
+resource_name = "Material.009"
+render_priority = 0
+shader = ExtResource("2_xcpow")
+shader_parameter/albedo = Color(0.386661, 0.386661, 0.386661, 1)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.676
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/max_height = 4.0
+shader_parameter/base_y = 0.0
+shader_parameter/crumple_tween = 1.0
+
+[node name="Red Car" instance=ExtResource("1_4vfkf")]
+
+[node name="Body_Cube001" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_67hdo")
+surface_material_override/1 = SubResource("ShaderMaterial_gv8m2")
+surface_material_override/2 = SubResource("ShaderMaterial_mju5a")
+surface_material_override/3 = SubResource("ShaderMaterial_ec0vf")
+
+[node name="FrontLeftWheel_Cylinder" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_wv67i")
+surface_material_override/1 = SubResource("ShaderMaterial_g27vw")
+
+[node name="BackLeftWheel_Cylinder001" parent="." index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_2lroa")
+surface_material_override/1 = SubResource("ShaderMaterial_jxjwj")
+
+[node name="BackRightWheel_Cylinder003" parent="." index="3"]
+surface_material_override/0 = SubResource("ShaderMaterial_lng37")
+surface_material_override/1 = SubResource("ShaderMaterial_18fco")
+
+[node name="FrontRightWheel_Cylinder002" parent="." index="4"]
+surface_material_override/0 = SubResource("ShaderMaterial_gfd8u")
+surface_material_override/1 = SubResource("ShaderMaterial_2kbdr")

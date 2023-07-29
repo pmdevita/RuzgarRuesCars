@@ -19,7 +19,4 @@ func _physics_process(delta):
 	var basis = Basis.looking_at(player.global_position - global_position)
 	var lookat = Transform3D(Basis.looking_at(player.global_position - global_position), global_position)
 	global_transform.basis = global_transform.basis.slerp(basis, 0.01)
-	# global_rotation = global_rotation.slerp(lookat.rot, 0.1)
-	# global_rotation.
-	# global_rotation = global_rotation.lerp(player.global_rotation + rotation_offset, 0.5)
 	

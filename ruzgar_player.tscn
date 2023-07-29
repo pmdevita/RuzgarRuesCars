@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://bllbcvnu8c3gr"]
+
+[ext_resource type="Script" path="res://resources/ruzgar.gd" id="1_e0av0"]
+[ext_resource type="PackedScene" uid="uid://bld33m1f6hh25" path="res://ruzgar/ruzgar-lowpoly.tscn" id="2_uyihn"]
+[ext_resource type="Script" path="res://scripts/RuzgarCarTarget.gd" id="3_yq7ig"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aaq4l"]
+radius = 0.6821
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjv25"]
+size = Vector3(4.9026, 4.90081, 1.12558)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e56hy"]
+radius = 0.435276
+height = 1.46136
+
+[node name="Ruzgar" type="CharacterBody3D"]
+transform = Transform3D(2.62142, 0, 0, 0, 2.62142, 0, 0, 0, 2.62142, 0, 0, 0)
+script = ExtResource("1_e0av0")
+base_speed = 20.0
+jump_force = 80.0
+gravity = -30.0
+left_lane = -7.9
+lane_size = 7.9
+lane = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.173086, 0)
+shape = SubResource("CapsuleShape3D_aaq4l")
+
+[node name="ruzgar-lowpoly" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("2_uyihn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.800347, 0)
+game_manager = NodePath("../../GameManager")
+
+[node name="CarDetect" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_yq7ig")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CarDetect"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.219, -4.03881, 0)
+shape = SubResource("BoxShape3D_vjv25")
+
+[node name="SmashHold" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.15
+one_shot = true
+
+[node name="SmashHitbox" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SmashHitbox"]
+shape = SubResource("CapsuleShape3D_e56hy")
+
+[connection signal="area_entered" from="CarDetect" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="SmashHitbox" to="." method="_on_smash_hitbox_body_entered"]
